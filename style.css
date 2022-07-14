@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+
+}
+
+.main-container{
+    width: 100%;
+    height: 70px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    align-items: center;
+    
+}
+
+.menu{
+    max-width: 800px;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.menu h1{
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    color: rgb(101, 106, 255);
+    font-size: 30px;
+}
+
+.menu form{
+    background-color: #efefef;
+    border-radius: 9px;
+}
+
+.menu input{
+    padding: 20px 60px 20px 10px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 9px;
+    
+}
+
+.menu button{
+    padding: 13px;
+    margin: 0;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.container{
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+.add-task{
+    width: 100%;
+    height: 250px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 9px;
+}
+
+.add-task form{
+    width: 750px;
+    margin: 25px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-task label{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    margin: 25px;
+    padding-top: 25px;
+    font-size: 20px;
+}
+
+.add-task input{
+    padding: 20px 150px 20px 10px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 9px;
+    transition: all 0.3s;
+}
+
+#text{
+    outline: solid 2px rgb(255, 255, 255);
+}
+
+#text:focus {
+    outline: solid 2px rgb(101, 106, 255);
+    transform: 0.3s;
+}
+
+#select{
+    outline: solid 2px rgb(255, 255, 255);
+}
+
+#select:focus {
+    outline: solid 2px rgb(101, 106, 255);
+    transform: 0.3s;
+}
+
+
+.add-task select{
+    padding: 20px 202px 20px 10px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 9px;
+    margin-left: auto;
+    transition: all 0.3s;
+}
+
+
+.add-task button{
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 35px;
+    border: none;
+    background-color:rgb(101, 106, 255); 
+    border-radius: 9px;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.task-list{
+    width: 100%;
+    margin-top: 30px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    height: 50vh;
+    overflow-y: scroll;
+    border-radius: 9px;
+}
+
+.task-list h2{
+    margin: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+}
+
+.list, .listSrc{
+    width: 750px;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.task-card{ 
+    width: 740px;
+    background-color: #efefef;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9px;
+}
+
+.task-card p{
+    margin: 0 12px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+}
+
+.task-card button{
+    border: none;
+    margin: 0 12px;
+    cursor: pointer;
+    padding: 19px 6px;
+    font-size: medium;
+    transition: all 0.3s;
+    background-color: transparent;
+}
+
+.task-card button:hover{
+    transform: rotate(45deg);
+    color: red;
+}
+.task-card div{
+    display: flex;
+}
+
+.task-card span{
+    margin-left: 12px;
+}
+
+#urgent{
+    display: inline-block;
+    background-color: red;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+}
+
+#priority{
+    display: inline-block;
+    background-color: rgb(234, 196, 26);
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;color: #ffbf00;
+}
+
+#normal{
+    display: inline-block;
+    background-color: rgb(42, 243, 28);
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+}
+
+footer{
+    width: 100%;
+    height: 100px;
+}
+
+.resultSearch{
+    background-color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    max-width: 800px;   
+    border-radius: 7px;
+    padding-top: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.3s;
+    
+}
+
+.searcList{
+    width: 700px;
+    margin: 10px auto 0 auto
+}
+
+.resultSearch a{
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.resultSearch a:hover{
+    transform: rotate(45deg);
+    color: red;
+}
+
+#show{
+    display: none;
+}
+
+#blackOut{
+    opacity: 10%;
+}
