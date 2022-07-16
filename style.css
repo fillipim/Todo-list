@@ -254,7 +254,8 @@ footer{
 }
 
 #show{
-    display: none;
+    opacity: 0;
+    transition: 0.6s;
 }
 
 #blackOut{

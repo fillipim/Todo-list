@@ -112,7 +112,7 @@ srcList.id = "show"
 const listSrc = document.querySelector('.listSrc')
 
 const closeSrc = document.querySelector('.resultSearch a')
-console.log(closeSrc);
+
 btnSrc.addEventListener("click", function (e) {
             e.preventDefault()
             if (inputSrc.value == "") {
@@ -127,15 +127,22 @@ btnSrc.addEventListener("click", function (e) {
 
                         let str = tasks[i].titulo
                         if (str.toLowerCase().includes(inputSrc.value.toLowerCase())) {
-                            console.log(str);
+                            
 
                             searchResult.push(tasks[i])
+                        }else{
+                            searchResult.push( {
+                                    titulo: "Tarefa não encontrada",
+                                    tipo: " ",
+                                    prioridade: 1
+                                  })
                         }
 
                     }
 
                     listingTasks(searchResult, listSrc)
                     inputSrc.value = ""
+                    console.log(searchResult);
                 }
             }})
 
