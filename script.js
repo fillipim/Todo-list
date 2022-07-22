@@ -96,11 +96,15 @@ const btn = document.querySelector('.task-list button img')
 
 listTask.addEventListener('click', function (e) {
     let btnRemove = e.target
-    if (btnRemove.tagName == 'BUTTON') {
-        tasks.splice(btnRemove.id, 1)
-        listTask.innerHTML = ''
-        listingTasks(tasks, listTask)
-    }
+    btnRemove.closest('li').classList.add('delete')
+    setTimeout(()=>{
+        if (btnRemove.tagName == 'BUTTON') {
+            tasks.splice(btnRemove.id, 1)
+            listTask.innerHTML = ''
+            listingTasks(tasks, listTask)
+        }
+
+    }, 500)
 
 })
 
@@ -122,20 +126,14 @@ btnSrc.addEventListener("click", function (e) {
                 if (tasks.length > 0) {
 
                     const searchResult = []
+                    let div = document.querySelector('#black')
+                    div.classList.add('black-out')
                     srcList.removeAttribute('id')
                     for (let i = 0; i < tasks.length; i++) {
 
                         let str = tasks[i].titulo
                         if (str.toLowerCase().includes(inputSrc.value.toLowerCase())) {
-                            
-
-                            searchResult.push(tasks[i])
-                        }else{
-                            searchResult.push( {
-                                    titulo: "Tarefa não encontrada",
-                                    tipo: " ",
-                                    prioridade: 1
-                                  })
+                             searchResult.push(tasks[i])
                         }
 
                     }

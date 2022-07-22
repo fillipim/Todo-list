@@ -165,6 +165,7 @@ body{
     justify-content: space-between;
     align-items: center;
     border-radius: 9px;
+    opacity: 100%;
 }
 
 .task-card p{
@@ -258,6 +259,9 @@ footer{
     transition: 0.6s;
 }
 
-#blackOut{
-    opacity: 10%;
+.delete{
+    transform: translateX(-746px);
+    opacity: 0;
+    transition: 1s;
 }
+
